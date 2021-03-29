@@ -19,7 +19,7 @@ let iterator = myGenerator();
 let fifteenArray=[];
 
 for (let i = 1; i <= 16; i++) {
-    fifteenArray.push("#" + iterator.next().value);
+    fifteenArray.push(iterator.next().value + "#");
   }
 // Only change code below this line
 
