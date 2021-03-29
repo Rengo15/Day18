@@ -1,27 +1,33 @@
-let shopingList = new Map([
-    ["Banana", 3],
-    ["Pineapple", 5],
-    ["Pear", 2],
-    ["Carrot", 10],
-    ["Apple", 1.5]
-
-]);
-let arrKey=[];
-let arrValue=[];
-for(let i of shopingList.keys()){
-    arrKey.push(i);
-    console.log("groceries:", i);
-}
-for (let i of shopingList.values()){
-    arrValue.push(i);
-    console.log("amount:", i);
-}
-for (let i of shopingList.entries()){
-    console.log(i);
-}
-
 // Only change code below this line
-
-// Only change code above this line
-
-module.exports = {shopingList, arrKey, arrValue};
+let shoppingList = new Map([
+    [3, "Banana"],
+    [4, "Pineapple"],
+    [2, "Pear"],
+    [10, "Carrot"],
+    [1.5, "Apple"],
+  ]);
+  
+  let arrValue = [];
+  let arrKey = [];
+  
+  for (let value of shoppingList.values()) {
+    arrValue.push(`groceries: ${value}`);
+  }
+  for (let print of arrValue) {
+    console.log(print);
+  }
+  
+  for (let key of shoppingList.keys()) {
+    arrKey.push(`amount: ${key}`);
+  }
+  for (let print of arrKey) {
+    console.log(print);
+  }
+  
+  for (let [key, value] of shoppingList) {
+    console.log("[ " + "'" + value + "'" + ", " + key + " ]");
+  }
+  
+  // Only change code above this line
+  
+  module.exports = { shoppingList, arrKey, arrValue };
